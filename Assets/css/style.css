@@ -3,7 +3,7 @@ body {
   font-size: 16px;
 }
 
-textarea {
+.txtarea {
   background: transparent;
   border: none;
   resize: none;
@@ -12,12 +12,21 @@ textarea {
   padding: 10px;
 }
 
+.header {
+  text-align: center;
+  background-color: transparent;
+  color: black;
+  border-radius: 0;
+  border-bottom: 5px solid black;
+}
+
 .description {
   white-space: pre-wrap;
 }
 
 .time-block {
   border-radius: 15px;
+  text-align: center;
 }
 
 .row {
