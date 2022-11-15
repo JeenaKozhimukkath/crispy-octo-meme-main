@@ -30,22 +30,23 @@ for (let i = 0; i < startHr.length ; i++) {
   var HourSection = $("<div>");
   HourSection.addClass("hour col-2 col-md-1 text-center py-3");
   HourSection.text(startHr[i]);
+  var txtSection = $("<textarea>");
+  txtSection.addClass("col-8 col-md-10 txtarea description");
   
   //console.log("now:"+timeNow);
   var hr=moment(startHr[i],'hh:00 A');
   //console.log("array:"+hr);
   if (timeNow.isSame(hr)) {
-    HourSection.addClass("present");
+    txtSection.addClass("present");
   } else if (timeNow.isBefore(hr)) {
-    HourSection.removeClass("present");
-    HourSection.addClass("future");
+    txtSection.removeClass("present");
+    txtSection.addClass("future");
   }
   else {
-    HourSection.removeClass("future");
-    HourSection.addClass("past");
+    txtSection.removeClass("future");
+    txtSection.addClass("past");
   }
-  var txtSection = $("<textarea>");
-  txtSection.addClass("col-8 col-md-10 txtarea description");
+  
 
   var SaveBtn = $("<button>");
   SaveBtn.addClass("btn saveBtn col-2 col-md-1");
